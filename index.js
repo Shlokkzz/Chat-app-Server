@@ -13,6 +13,10 @@ const corsOptions ={
 app.use(cors(corsOptions));
 app.use(express.json()); 
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Chat App server!');
+});
+
 const server = app.listen('3001',()=>{
     console.log("Server running on port 3001... ✅");
 })
